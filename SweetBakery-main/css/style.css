@@ -506,11 +506,14 @@ body{
     }
 
     #shopbtn,
-    .contact_btn,
-    #order{
-        width: 100%;
-        max-width: 250px;
-    }
+.contact_btn,
+#order{
+    width: 100%;
+    max-width: 280px;
+    height: 60px;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
     #shopheading{
         font-size: 1.8rem;
