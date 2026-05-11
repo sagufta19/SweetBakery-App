@@ -1,190 +1,315 @@
-/* default section */
+/* =========================
+   Default Section
+========================= */
+
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
 
 
-/*  Navigation Bar Section */ 
 
-/* Navigation Bar Section: Menue/List */
+/* =========================
+   Navigation Bar
+========================= */
+
 #navigation{
     display: flex;
-    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    min-height: 70px;
     position: sticky;
-    top: 0px;
+    top: 0;
     background-color: white;
+    z-index: 1000;
 }
+
 #navigation ul{
     display: flex;
-    margin-top: 10px;
-    padding: 2px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .list{
-    margin-left: 57px;
-    padding: 2px;
     list-style: none;
+    margin-right: 40px;
 }
+
 .list a{
     text-decoration: none;
     color: #000000e6;
     font-family: 'Baloo 2', cursive;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    transition: 0.3s;
 }
+
 .list a:hover{
-    
-    /* text-decoration: overline solid #ec0f6b; */
     color: #ec0f6b;
-    text-decoration-thickness: 10px;
-}
-.list a:active{
-    text-decoration: overline solid #f81717;
-    
 }
 
-/*Navigation section: Cart and Search */
+
+
+/* =========================
+   Search & Cart Icons
+========================= */
+
+#icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#search img,
+#cart img{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
 #search img{
-    height: 35px;
-    margin-top: 10px;
-    margin-left: 375px;
+    height: 32px;
 }
 
-#search img:hover{
+#cart img{
+    height: 38px;
+}
+
+#search img:hover,
+#cart img:hover{
     filter: invert(100%);
-    -webkit-filter: invert(100%);
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
- #cart img{
-    height: 40px;
-    margin-top: 8px;
-    margin-left: 20px;
-}
-                    
- #cart img:hover{
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
 
 
-/* Section Gallary */
-/* main background gallary settings */
+/* =========================
+   Store Section
+========================= */
 
 #store{
-    height: 10405px;
     width: 100%;
-    /* background:url('../img/background/4.jpg') center center; */
+    min-height: 100vh;
     background-color: #f0f0f0e6;
-    background-size: cover;
     border: 10px solid white;
+    padding: 40px 20px;
 }
+
 #store h1{
-    margin-top: 0px;
+    text-align: center;
     margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Section Gallary: Cards Envelop */
 
-#cards{                 
+
+/* =========================
+   Cards Container
+========================= */
+
+#cards{
     display: flex;
     flex-wrap: wrap;
-    margin: -35px 0px 0px 2px;
+    justify-content: center;
+    gap: 35px;
 }
 
+
+
+/* =========================
+   Card Design
+========================= */
+
 .boxcustom{
-    
+    width: 370px;
+    min-height: 620px;
     border: 2px solid #ec0f6b;
-    height: 625px;
-    width: 377px;
-    display: block;
-    margin:60px 32px 54px 32px;
-    cursor: pointer;
-    position: inherit;
+    background-color: #f7f7f7;
+    transition: 0.3s ease;
 }
+
 .boxcustom:hover{
     box-shadow: 7px 7px 45px #750b0b;
     background-color: white;
-    transition: all 0.1s ease 0s;
 }
-#box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
+
 #cards img{
-   
-    height: 50%;
     width: 100%;
+    height: 320px;
+    object-fit: cover;
     border: 10px solid white;
 }
 
 #cards h2{
-    margin: 30px 0px 0px 95px;
-}
-#cards p{
-    font-size: 1.1rem;
-    padding: 17px;
-    margin-top: 8px;
     text-align: center;
+    margin-top: 25px;
+    padding: 0 10px;
 }
+
 #cards h3{
-    margin: 10px 0px;
-    font-size: 25px;
     text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
 }
 
-/* Buy Now Button */
+#cards p{
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+    line-height: 1.5;
+}
 
 
-.example_c {background-image: linear-gradient(to right, #ff0084 0%, #33001b  51%, #ff0084  100%)}
-.example_c {
-    margin: 10px;
-    width: 230px;
-    height: 50px;
-    padding: 15px 45px;
+
+/* =========================
+   Button
+========================= */
+
+.example_c{
+    background-image: linear-gradient(to right, #ff0084 0%, #33001b 51%, #ff0084 100%);
+    width: 220px;
+    padding: 14px 20px;
+    margin: 20px auto 30px;
     text-align: center;
     text-transform: uppercase;
-    transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 20px #eee;
     border-radius: 40px;
     display: block;
     text-decoration: none;
- }
+    transition: 0.5s;
+    font-weight: bold;
+}
 
- .example_c:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
-
- }
-#cards a{
-    display: block;    
+.example_c:hover{
+    background-position: right center;
 }
 
 
 
-/* All Page Headings Setting Section Is Here: */
+/* =========================
+   Heading Style
+========================= */
 
 .subheading{
-    color: #750b0b;;
+    color: #750b0b;
     font-size: 2rem;
     font-family: 'Great Vibes', cursive;
-    /* font-family: 'Monda', sans-serif; */
 }
-html{
-    scroll-behavior: smooth;
+
+
+
+/* =========================
+   Tablet Responsive
+========================= */
+
+@media (max-width: 992px){
+
+    #navigation{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #navigation ul{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .list{
+        margin: 10px 20px;
+    }
+
+    .boxcustom{
+        width: 45%;
+    }
+}
+
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 768px){
+
+    #navigation ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .list{
+        margin: 10px 0;
+    }
+
+    #icons{
+        margin-top: 10px;
+    }
+
+    #cards{
+        gap: 25px;
+    }
+
+    .boxcustom{
+        width: 100%;
+        max-width: 350px;
+        min-height: auto;
+    }
+
+    #cards img{
+        height: 260px;
+    }
+
+    #cards h2{
+        font-size: 1.7rem;
+    }
+
+    #cards h3{
+        font-size: 22px;
+    }
+
+    #cards p{
+        font-size: 0.95rem;
+    }
+
+    .example_c{
+        width: 200px;
+        padding: 12px;
+    }
+}
+
+
+@media (max-width: 480px){
+
+    #store{
+        padding: 20px 10px;
+    }
+
+    .subheading{
+        font-size: 1.6rem;
+    }
+
+    #cards img{
+        height: 220px;
+    }
+
+    #cards h2{
+        font-size: 1.4rem;
+    }
+
+    #cards p{
+        font-size: 0.9rem;
+    }
+
+    .example_c{
+        width: 180px;
+        font-size: 0.85rem;
+    }
 }
